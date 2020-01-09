@@ -6,8 +6,12 @@ This file is fully explained with youtube video located at
 ### Blockchain paper 
 If you used any part of this code, kindly cite the following paper (blockchain based paper) in your research
 
-Hosam, Osama. "Hiding Bitcoins in Steganographic Fractals." 2018 IEEE International Symposium on Signal Processing and Information Technology (ISSPIT). IEEE, 2018.
+*Hosam, Osama. "Hiding Bitcoins in Steganographic Fractals." 2018 IEEE International Symposium on Signal Processing and Information Technology (ISSPIT). IEEE, 2018.*
   
+
+
+Thank you
+
 Osama Hosameldeen  
 Associate Professor  
 Taibah University  
