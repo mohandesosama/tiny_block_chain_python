@@ -33,4 +33,4 @@ def hello():
     return "Hello you are in the main page of this node test "
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
