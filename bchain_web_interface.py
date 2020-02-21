@@ -30,7 +30,7 @@ def display_full_chain():
 
 @app.route("/")
 def hello():
-    return "Hello you are in the main page of this node"
+    return "Hello you are in the main page of this node test "
 
 if __name__=="__main__":
     app.run()
