@@ -1,6 +1,10 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 from flask import jsonify
 from block_chain import BlockChain
+
+osaCoin=BlockChain()
+osaCoin.createTransaction('address1','address2',100)
+osaCoin.createTransaction('address2','address1',50)
 
 app = Flask(__name__)
 
@@ -12,16 +16,11 @@ def mine():
 def new_transation():
     return None
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def hello():
-    osaCoin=BlockChain()
-    osaCoin.createTransaction('address1','address2',100)
-    osaCoin.createTransaction('address2','address1',50)
-    print("Starting mining")
-    osaCoin.minePendingTransatin("osamaaddress")
-    print("Osama miner blanace is ", osaCoin.getBalance("osamaaddress"))
-    print(osaCoin.isChainValid())
-    return  render_template('index.html',chain_length=len(osaCoin.chain))
+    if request.method == "POST":
+        osaCoin.minePendingTransatin("osamaaddress")
+    return  render_template('index.html',pending_transactions=osaCoin.pendingTransations)
 
 if __name__=="__main__":
     app.run(debug=True)

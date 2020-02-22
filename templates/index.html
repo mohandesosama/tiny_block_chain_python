@@ -5,20 +5,25 @@
         <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     </head>
     <body>
-        <div class="container">
-            <label>Username: osamahosam </label>
-            <br>
-            <hr>
-            <br>
-            <label>Transactions</label>
-            <br>
-            <lable> From: </lable>
-            <input type="text" name="fromaddress" placeholder="enter the address to withdrow money from ...">
-            <lable> To: </lable>
-            <input type="text" name="toaddress" placeholder="enter the address to deposit money to it ...">
-            <lable>Pending Transactions</lable>
-            <textarea id="ptransactions" name="pendingtransactions" style="height: 200px;"></textarea>
-            <input type="submit" value="submit">
-        </div>
+        <form method="post" action=".">
+            <div class="container">
+                <label>Minername: osamahosam </label>
+                <br>
+                <hr>
+                <br>
+                <label> <h3>Transactions</h3></label>
+                <br>
+                <lable> From: </lable>
+                <input type="text" name="fromaddress" placeholder="enter the address to withdrow money from ...">
+                <lable> To: </lable>
+                <input type="text" name="toaddress" placeholder="enter the address to deposit money to it ...">
+                <input type="submit" value="submit transaction">
+                <br>
+                <br>
+                <lable>Pending Transactions</lable>
+                <textarea id="ptransactions" name="pendingtransactions" placeholder="{{pending_transactions}}" style="height: 200px;"></textarea>
+                <input type="submit" value="mine pending transactions">
+            </div>
+        <form>
     </body>
 </html>
