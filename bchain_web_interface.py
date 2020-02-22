@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 from flask import jsonify
 from block_chain import BlockChain
 
@@ -30,7 +30,7 @@ def display_full_chain():
 
 @app.route("/")
 def hello():
-    return "Hello you are in the main page of this node test "
+    return  render_template('index.html',chain_length=len(osaCoin.chain))
 
 if __name__=="__main__":
     app.run(debug=True)
