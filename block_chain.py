@@ -27,7 +27,7 @@ class BlockChain():
     def __init__(self):
         self.chain=[]
         self.pendingTransations=[]
-        self.mining_reward=100
+        self.mining_reward=70
         self.difficulty=3
         self.generateGenesisBlock()
     def generateGenesisBlock(self):

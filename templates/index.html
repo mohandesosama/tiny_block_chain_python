@@ -5,8 +5,20 @@
         <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     </head>
     <body>
-        <lable>Number of the blocks in the blockchain</lable>
-        
-        <input type="text" width="120" height="50" value="{{chain_length}}">
+        <div class="container">
+            <label>Username: osamahosam </label>
+            <br>
+            <hr>
+            <br>
+            <label>Transactions</label>
+            <br>
+            <lable> From: </lable>
+            <input type="text" name="fromaddress" placeholder="enter the address to withdrow money from ...">
+            <lable> To: </lable>
+            <input type="text" name="toaddress" placeholder="enter the address to deposit money to it ...">
+            <lable>Pending Transactions</lable>
+            <textarea id="ptransactions" name="pendingtransactions" style="height: 200px;"></textarea>
+            <input type="submit" value="submit">
+        </div>
     </body>
 </html>

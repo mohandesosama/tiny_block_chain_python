@@ -23,3 +23,7 @@ Osama Hosameldeen
 Associate Professor  
 Taibah University  
 https://www.linkedin.com/in/mohandesosama/
+
+### References
+* Turning a Python script into a website, [[Link]](https://blog.pythonanywhere.com/169/)
+* Flask – (Creating first simple application), [[Link]](https://www.geeksforgeeks.org/flask-creating-first-simple-application/)
