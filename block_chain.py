@@ -2,13 +2,6 @@ import hashlib
 import json
 from datetime import datetime
 from time import time
-class Transaction():
-    def __init__(self, from_address, to_address, amount, type1):
-        self.from_address = from_address
-        self.to_address = to_address
-        self.amount = amount
-        self.type = type1
-
 class Block():
     def __init__(self, tstamp, transactionsList, prevhash=''):
         self.nonce = 0
