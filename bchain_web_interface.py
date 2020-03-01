@@ -3,8 +3,8 @@ from flask import jsonify
 from block_chain import BlockChain, Transaction
 
 osaCoin=BlockChain()
-osaCoin.createTransaction(Transaction('address1','company1', 100, 'new')) #instype = new , renew
-osaCoin.createTransaction(Transaction('company1','address1', 60, 'new')) #instype = new , renew
+osaCoin.createTransaction(Transaction('address1','address2',100))
+osaCoin.createTransaction(Transaction('address2','address1',50))
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def new_transation():
 def hello():
     if request.method == "POST":
         osaCoin.minePendingTransaction("osamaaddress")
-    return  render_template('index.html',pending_transactions=osaCoin.pendingTransactions)
+    return  render_template('index.html',pending_transactions=osaCoin.pendingTransations)
 
 if __name__=="__main__":
     app.run(debug=True)
