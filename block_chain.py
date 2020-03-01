@@ -2,6 +2,7 @@ import hashlib
 import json
 from datetime import datetime
 from time import time
+#block chain created by me. 
 class Block():
     def __init__(self,nonce, tstamp,transactionsList,prevhash='',hash=''):
         self.nonce=nonce
